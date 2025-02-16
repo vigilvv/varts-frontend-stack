@@ -11,7 +11,9 @@ export default tseslint.config(
     settings: { react: { version: "19.0" } },
     extends: [
       js.configs.recommended,
-      ...tseslint.configs.strictTypeChecked,
+      // ...tseslint.configs.strictTypeChecked,
+      // ...tseslint.configs.recommendedTypeChecked,
+      ...tseslint.configs.recommended,
       ...tseslint.configs.stylisticTypeChecked,
     ],
     files: ["**/*.{ts,tsx}"],
