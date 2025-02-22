@@ -19,3 +19,9 @@ Other libraries:
 #### Netlify SPA support
 
 Added _redirects to public folder.
+
+
+
+#### Data Store
+
+`src/store` is the data store. The `local` folder in it can be used for files that interact with localStorage. The `global` folder can be used for files that handle global state (Zustand, Redux).
