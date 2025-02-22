@@ -1,5 +1,14 @@
 import { createGlobalStyle } from "styled-components";
 
+const colors = {
+  white: "hsl(0, 100%, 100%)",
+  blue: "hsl(200, 80%, 56%, 1)",
+  pink: "hsl(330, 100%, 70%, 1)",
+} as const;
+
+type ColorsObject = typeof colors;
+export type Colors = keyof ColorsObject;
+
 export const GlobalStyles = createGlobalStyle`
 :root {
 
@@ -9,8 +18,11 @@ export const GlobalStyles = createGlobalStyle`
 
 // Global colors
   &, &.light-mode {
-      --blue: hsl(200, 80%, 56%, 1);
-      --pink: hsl(330, 100%, 70%, 1);
+      /* --blue: hsl(200, 80%, 56%, 1);
+      --pink: hsl(330, 100%, 70%, 1); */
+
+      --blue: ${colors.blue};
+      --pink: ${colors.pink};
   }
   
   /* &.dark-mode {
